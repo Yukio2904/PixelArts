@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Art Portfolio</title>
+<style>
+    /* CSS Styles */
+    body {
+        font-family: Courier New, Courier, monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #111; /* Dark theme */
+        color: #fff;
+        transition: background-color 0.5s, color 0.5s;
+    }
+    header {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .container {
+        max-width: 50%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #111; /* Dark theme */
+        border-radius: 15px; /* Rounded corners */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        animation: fadeIn 1s ease-in-out;
+    }
+    .artwork {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .artwork-item {
+        margin-bottom: 20px;
+        background-color: #000; /* Black background */
+        border: 4px solid #333; /* Gray frame */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Hide overflow */
+        transition: transform 0.3s ease-in-out;
+        animation: scaleIn 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .artwork-item img {
+        max-width: 800px;
+        max-height: 800px;
+        
+        width: auto;
+        height: auto;
+        display: block;
+        background-color: inherit; /* Use parent's background */
+    }
+    .artwork-item img:hover {
+        transform: scale(1.1);
+    }
+    .artwork-item figcaption {
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        background-color: inherit; /* Use parent's background */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.5);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+
+    /* Light theme */
+    body.light-theme {
+        background-color: #c5c5c5;
+        color: #111;
+    }
+    body.light-theme .container {
+        background-color: #f0f0f0; /* Light theme background */
+        box-shadow: 0 0 20px rgba(97, 97, 97, 0.3);
+    }
+    body.light-theme .artwork-item {
+        background-color: #f0f0f0; /* Light theme background */
+        border: 4px solid #cacaca; /* frame */
+    }
+
+    /* Button style */
+    button.theme-toggle {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    }
+    button.theme-toggle:hover {
+        background-color: #fff;
+        color: #111;
+    }
+    .filter-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .filter-buttons button {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    }
+    .filter-buttons button:hover {
+        background-color: #fff;
+        color: #111;
+    }
+</style>
+</head>
+<body class="dark-theme">
+    <header>
+        <h1>Yu-1N_54N_17¥'s works</h1>
+        <p>Check out my pixel art creations!</p>
+        <button class="theme-toggle" onclick="toggleTheme()">Light theme</button>
+        <div class="filter-buttons">
+            <button onclick="filterByGame('Random')">Random</button>
+            <button onclick="filterByGame('Noita')">Noita</button>
+            <!-- Add more buttons for other games -->
+            <button onclick="showAll()">Show All</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="artwork">
+            <div class="artwork-item" data-game="Random">
+                <img src="RoboArm.gif" alt="Mechanical Arm">
+                <figcaption>Mechanical Arm</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Random">
+                <img src="Box.gif" alt="Box">
+                <figcaption>Box</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Random">
+                <img src="Medkit2.gif" alt="First Aid Kit">
+                <figcaption>First Aid Kit</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Random">
+                <img src="Farm.gif" alt="Farm with Silos">
+                <figcaption>Farm</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day1.gif" alt="Day 1: Mina">
+                <figcaption>Day 1: Mina</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day2.gif" alt="Day 2: Hamis">
+                <figcaption>Day 2: Hamis</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day3.gif" alt="Day 3: Hurtta">
+                <figcaption>Day 3: Hurtta</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day4.gif" alt="Day 4: Jättilaser-lennokki">
+                <figcaption>Day 4: Jättilaser-lennokki</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day5.gif" alt="Day 5: Lepakko">
+                <figcaption>Day 5: Lepakko</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day6.gif" alt="Day 6: Puska">
+                <figcaption>Day 6: Puska</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day7.gif" alt="Day 7: Laahustussieni">
+                <figcaption>Day 7: Laahustussieni</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day8.gif" alt="Day 8: Toveri & Kauhuhirviö">
+                <figcaption>Day 8: Toveri & Kauhuhirviö</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day9.gif" alt="Day 9: Ukko">
+                <figcaption>Day 9: Ukko</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day10.gif" alt="Day 10: Stevari">
+                <figcaption>Day 10: Stevari</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day11.gif" alt="Day 11: Sokaisunmestari">
+                <figcaption>Day 11: Sokaisunmestari</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day12.gif" alt="Day 12: Limanuljaska">
+                <figcaption>Day 12: Limanuljaska</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day13.gif" alt="Day 13: Peitsivartija">
+                <figcaption>Day 13: Peitsivartija</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day14.gif" alt="Day 14: Music Machine">
+                <figcaption>Day 14: Music Machine</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day15.gif" alt="Day 15: Sampo">
+                <figcaption>Day 15: Sampo</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day16.gif" alt="Day 16: Turso">
+                <figcaption>Day 16: Turso</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day17.gif" alt="Day 17: Black Hole">
+                <figcaption>Day 17: Black Hole</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day18.gif" alt="Day 18: Matkija">
+                <figcaption>Day 18: Matkija</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day19.gif" alt="Day 19: KK-Tannki">
+                <figcaption>Day 19: KK-Tannki</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day20.gif" alt="Day 20: Lammas">
+                <figcaption>Day 20: Lammas</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day21.gif" alt="Day 21: Kolmisilmän silmä">
+                <figcaption>Day 21: Kolmisilmän silmä</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day22.gif" alt="Day 22: Lava Lake">
+                <figcaption>Day 22: Lava Lake</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day23.gif" alt="Day 23: Kolmisilmän Koipi">
+                <figcaption>Day 23: Kolmisilmän Koipi</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day24.gif" alt="Day 24: Nuke">
+                <figcaption>Day 24: Nuke</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day25.gif" alt="Day 25: Paha Silmä">
+                <figcaption>Day 25: Paha Silmä</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day26.gif" alt="Day 26: Korjauslennokki">
+                <figcaption>Day 26: Korjauslennokki</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day27.gif" alt="Day 27: Jättimato">
+                <figcaption>Day 27: Jättimato</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day28.gif" alt="Day 28: Hahmonvaihtaja">
+                <figcaption>Day 28: Hahmonvaihtaja</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day29.gif" alt="Day 29: Vakoilija">
+                <figcaption>Day 29: Vakoilija</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day30.gif" alt="Day 30: Flummoxium">
+                <figcaption>Day 30: Flummoxium</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day31.gif" alt="Day 31: Syväolento">
+                <figcaption>Day 31: Syväolento</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day32.gif" alt="Day 32: Hiidenkivi & Lohkare">
+                <figcaption>Day 32: Hiidenkivi & Lohkare</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day33.gif" alt="Day 33: Puistokemisti">
+                <figcaption>Day 33: Puistokemisti</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day34.gif" alt="Day 34: Circle of Vigour">
+                <figcaption>Day 34: Circle of Vigour</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day35.gif" alt="Day 35: The Cauldron">
+                <figcaption>Day 35: The Cauldron</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day36.gif" alt="Day 36: Karl the Mighty, First of its Name, Mover of Suns, and Friend to All">
+                <figcaption>Day 36: Karl the Mighty, First of its Name, Mover of Suns, and Friend to All</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day37.gif" alt="Day 37: Fungal Caverns">
+                <figcaption>Day 37: Fungal Caverns</figcaption>
+            </div>
+            <div class="artwork-item" data-game="Noita">
+                <img src="Day38.gif" alt="Day 38: Turvalennokki">
+                <figcaption>Day 38: Turvalennokki</figcaption>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            const button = document.querySelector('.theme-toggle');
+            const currentTheme = document.body.classList.contains('light-theme') ? 'Light theme' : 'Dark theme';
+            button.textContent = currentTheme;
+            document.body.classList.toggle('light-theme');
+        }
+
+        function filterByGame(game) {
+            const items = document.querySelectorAll('.artwork-item');
+            items.forEach(item => {
+                const gameAttribute = item.getAttribute('data-game');
+                if (gameAttribute !== game) {
+                    item.style.display = 'none';
+                } else {
+                    item.style.display = 'flex'; /* Change display to flex */
+                }
+            });
+        }
+
+        function showAll() {
+            const items = document.querySelectorAll('.artwork-item');
+            items.forEach(item => {
+                item.style.display = 'flex'; /* Change display to flex */
+            });
+        }
+    </script>
+</body>
+</html>

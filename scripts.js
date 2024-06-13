@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 71, title: "Day 67: Haulikkohiisi", tags: ["noita", "character", "shotgun", "hiisi"], image: "Day67.gif", game: "Noita" },
         { id: 72, title: "Day 68: Avarice Diamond", tags: ["noita", "environment", "place","diamond", "avarice"], image: "Day68.gif", game: "Noita" },
         { id: 73, title: "Day 69: Stendari", tags: ["noita", "character", "fire","elemental"], image: "Day69.gif", game: "Noita" },
-        { id: 74, title: "Day 70: Egg of Technology", tags: ["noita", "environment", "myth","finnish","robot","mechanical","chest"], image: "Day69.gif", game: "Noita" }
+        { id: 74, title: "Day 70: Egg of Technology", tags: ["noita", "environment", "myth","finnish","robot","mechanical","chest"], image: "Day70.gif", game: "Noita" }
         // Add more arts here
     ];
 

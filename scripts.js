@@ -77,7 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 75, title: "Day 71: Firebolt", tags: ["noita", "spell", "flame","explosion","smoke","glow","kaboom"], image: "Day71.gif", game: "Noita" },
         { id: 76, title: "Day 72: Happonuljaska", tags: ["noita", "character", "slime","sludge","acid","eye"], image: "Day72.gif", game: "Noita" },
         { id: 77, title: "Day 73: The Moon", tags: ["planet", "environment", "orbit","celestial","space","cheese"], image: "Day73.gif", game: "Noita" },
-        { id: 78, title: "Galaxy", tags: ["planet", "environment", "orbit","celestial","space","star","super nova"], image: "GalaxyHD.gif", game: "None" }
+        { id: 78, title: "Galaxy", tags: ["planet", "environment", "orbit","celestial","space","star","super nova"], image: "GalaxyHD.gif", game: "None" },
+        { id: 77, title: "Day 74: Eväkäs", tags: ["character", "fish", "water","swimming","flow"], image: "Day74.gif", game: "Noita" },
+        { id: 77, title: "Day 75: Heinäsirkka", tags: ["character", "robot", "mechanical","walking","electric","drone"], image: "Day75.gif", game: "Noita" },
+        { id: 77, title: "Day 76: Kammolukki", tags: ["character", "creepy", "tooth","spider","disturbing","teeth"], image: "Day76.gif", game: "Noita" }
         // Add more arts here
     ];
 

@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 80, title: "Day 75: Heinäsirkka", tags: ["character", "robot", "mechanical","walking","electric","drone"], image: "Day75.gif", game: "Noita" },
         { id: 81, title: "Day 76: Kammolukki", tags: ["character", "creepy", "tooth","spider","disturbing","teeth"], image: "Day76.gif", game: "Noita" },
         { id: 82, title: "Day 77: Kantele", tags: ["item", "instrument", "music","notes","tree","wooden"], image: "Day76.gif", game: "Noita" },
-        { id: 83, title: "Day 76: Sähkiö", tags: ["character", "thunder", "electric","skull","elemental","shock"], image: "Day76.gif", game: "Noita" },
-        { id: 84, title: "Day 76: Ylialkemisti", tags: ["character", "mage", "wizard","alchemist","magic","robe","boss","floating"], image: "Day76.gif", game: "Noita" }
+        { id: 83, title: "Day 78: Sähkiö", tags: ["character", "thunder", "electric","skull","elemental","shock"], image: "Day76.gif", game: "Noita" },
+        { id: 84, title: "Day 79: Ylialkemisti", tags: ["character", "mage", "wizard","alchemist","magic","robe","boss","floating"], image: "Day76.gif", game: "Noita" }
         // Add more arts here
     ];
 

@@ -84,7 +84,12 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 82, title: "Day 77: Kantele", tags: ["item", "instrument", "music","notes","tree","wooden"], image: "Day77.gif", game: "Noita" },
         { id: 83, title: "Day 78: Sähkiö", tags: ["character", "thunder", "electric","skull","elemental","shock"], image: "Day78.gif", game: "Noita" },
         { id: 84, title: "Day 79: Ylialkemisti", tags: ["character", "mage", "wizard","alchemist","magic","robe","boss","floating"], image: "Day79.gif", game: "Noita" },
-        { id: 85, title: "Day 80: Wand of Destruction", tags: ["item", "kaboom", "nuke","spell","magic","crystal","golden","floating"], image: "Day80.gif", game: "Noita" }
+        { id: 85, title: "Day 80: Wand of Destruction", tags: ["item", "kaboom", "nuke","spell","magic","crystal","golden","floating"], image: "Day80.gif", game: "Noita" },
+        { id: 86, title: "Day 81: Salamurhaajarobotti", tags: ["character", "robot", "assasin","knife","blade","spy","floating"], image: "Day81.gif", game: "Noita" },
+        { id: 87, title: "Day 82: Mulkkio", tags: ["character", "eyes", "slime","stare","staring","floating"], image: "Day82.gif", game: "Noita" },
+        { id: 88, title: "Day 83: Susi", tags: ["character", "dog", "wolf","animal","walking","fur","cute"], image: "Day83.gif", game: "Noita" },
+        { id: 89, title: "Day 84: Unstable Crystal", tags: ["item", "kaboom", "sparkling","spell","magic","red"], image: "Day84.gif", game: "Noita" },
+        { id: 90, title: "Day 85: Toimari", tags: ["character", "hiisi", "goblin","gunner","fat","armored","jetpack","eyes"], image: "Day85.gif", game: "Noita" }
         // Add more arts here
     ];
 

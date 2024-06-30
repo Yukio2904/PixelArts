@@ -142,3 +142,27 @@ footer p {
     background-color: #ff4500;
     transform: scale(1.05);
 }
+
+.rainbow-red {
+    box-shadow: 0 0 10px red;
+}
+
+.rainbow-orange {
+    box-shadow: 0 0 10px orange;
+}
+
+.rainbow-yellow {
+    box-shadow: 0 0 10px yellow;
+}
+
+.rainbow-green {
+    box-shadow: 0 0 10px green;
+}
+
+.rainbow-blue {
+    box-shadow: 0 0 10px blue;
+}
+
+.rainbow-purple {
+    box-shadow: 0 0 10px purple;
+}

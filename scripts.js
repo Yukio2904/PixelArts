@@ -93,8 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 91, title: "Day 86: The work (End)", tags: ["environment", "brickwork", "magic","sampo","mill","grindstone","gold","gears"], image: "Day86.gif", game: "Noita" }
         // Add more arts here
     ];
-
-document.addEventListener("DOMContentLoaded", function() {
+    
     const donateButton = document.querySelector('.donate-button');
 
     donateButton.addEventListener('mouseover', function() {
@@ -104,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
     donateButton.addEventListener('mouseout', function() {
         donateButton.style.boxShadow = 'none';
     });
-});
 
     const gallery = document.getElementById("art-gallery");
     const filterInput = document.getElementById("filter");

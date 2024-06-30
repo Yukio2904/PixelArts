@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const donateButton = document.querySelector('.donate-button');
 
     donateButton.addEventListener('mouseover', function() {
-        donateButton.style.boxShadow = '0 0 10px #ff4500';
         donateButton.classList.remove(colors[currentColorIndex]);
         currentColorIndex = (currentColorIndex + 1) % colors.length;
         donateButton.classList.add(colors[currentColorIndex]);

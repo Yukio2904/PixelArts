@@ -89,7 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 87, title: "Day 82: Mulkkio", tags: ["character", "eyes", "slime","stare","staring","floating"], image: "Day82.gif", game: "Noita" },
         { id: 88, title: "Day 83: Susi", tags: ["character", "dog", "wolf","animal","walking","fur","cute"], image: "Day83.gif", game: "Noita" },
         { id: 89, title: "Day 84: Unstable Crystal", tags: ["item", "kaboom", "sparkling","spell","magic","red"], image: "Day84.gif", game: "Noita" },
-        { id: 90, title: "Day 85: Toimari", tags: ["character", "hiisi", "goblin","gunner","fat","armored","jetpack","eyes"], image: "Day85.gif", game: "Noita" }
+        { id: 90, title: "Day 85: Toimari", tags: ["character", "hiisi", "goblin","gunner","fat","armored","jetpack","eyes"], image: "Day85.gif", game: "Noita" },
+        { id: 91, title: "Day 86: The work (End)", tags: ["environment", "brickwork", "magic","sampo","mill","grindstone","gold","gears"], image: "Day86.gif", game: "Noita" }
         // Add more arts here
     ];
 

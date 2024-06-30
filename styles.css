@@ -121,48 +121,22 @@ footer p {
 }
 /* Add these styles to the end of your styles.css file */
 
+
 .donate-button {
     color: #fff;
-    background-color: #ff4500;
-    border: 2px solid #ff4500;
-    /* padding: 10px 20px; */
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: 1s; /* Reduced transition time */
+    position: relative; /* Ensure relative positioning for absolute shine */
+    overflow: hidden; /* Hide overflow to contain shine animation */
 }
 
 .donate-button:hover {
-    background-color: #ff6347;
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(15deg);
     padding: 10px 20px;
 }
 
 .donate-button:active {
-    background-color: #ff4500;
     transform: scale(1.05);
-}
-
-.rainbow-red {
-    box-shadow: 0 0 10px red;
-}
-
-.rainbow-orange {
-    box-shadow: 0 0 10px orange;
-}
-
-.rainbow-yellow {
-    box-shadow: 0 0 10px yellow;
-}
-
-.rainbow-green {
-    box-shadow: 0 0 10px green;
-}
-
-.rainbow-blue {
-    box-shadow: 0 0 10px blue;
-}
-
-.rainbow-purple {
-    box-shadow: 0 0 10px purple;
 }

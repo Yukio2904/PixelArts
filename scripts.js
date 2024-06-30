@@ -96,15 +96,69 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const donateButton = document.querySelector('.donate-button');
 
-    donateButton.addEventListener('mouseover', function() {
-        donateButton.classList.remove(colors[currentColorIndex]);
-        currentColorIndex = (currentColorIndex + 1) % colors.length;
-        donateButton.classList.add(colors[currentColorIndex]);
-    });
+// Define rainbow colors for background and box-shadow
+const rainbowColors = [
+    { 
+        backgroundColor: 'red', 
+        boxShadowColor: 'red',
+        textColor: 'white' // Text color opposite to red background
+    },
+    { 
+        backgroundColor: 'orange', 
+        boxShadowColor: 'orange',
+        textColor: 'black' // Text color opposite to orange background
+    },
+    { 
+        backgroundColor: 'yellow', 
+        boxShadowColor: 'yellow',
+        textColor: 'black' // Text color opposite to yellow background
+    },
+    { 
+        backgroundColor: 'green', 
+        boxShadowColor: 'green',
+        textColor: 'white' // Text color opposite to green background
+    },
+    { 
+        backgroundColor: 'blue', 
+        boxShadowColor: 'blue',
+        textColor: 'white' // Text color opposite to blue background
+    },
+    { 
+        backgroundColor: 'purple', 
+        boxShadowColor: 'purple',
+        textColor: 'white' // Text color opposite to purple background
+    }
+];
+    
 
-    donateButton.addEventListener('mouseout', function() {
-        donateButton.style.boxShadow = 'none';
-    });
+let currentColorIndex = 0;
+let intervalId;
+
+donateButton.addEventListener('mouseenter', function() {
+    // Start interval to change colors every 500ms
+    intervalId = setInterval(changeColor, 500);
+});
+
+donateButton.addEventListener('mouseleave', function() {
+    // Stop the interval and reset to initial state
+    clearInterval(intervalId);
+    donateButton.style.backgroundColor = '#222'; // Reset background color
+    donateButton.style.borderColor = '#444'; // Reset border color
+    donateButton.style.boxShadow = 'none'; // Remove box-shadow
+    donateButton.style.color = 'white'; // Reset text color to white
+});
+
+function changeColor() {
+    const { backgroundColor, boxShadowColor, textColor } = rainbowColors[currentColorIndex];
+
+    donateButton.style.backgroundColor = backgroundColor;
+    donateButton.style.borderColor = backgroundColor; // Border color same as background
+    donateButton.style.boxShadow = `0 0 10px ${boxShadowColor}`;
+    donateButton.style.color = textColor; // Set text color based on predefined value
+
+    currentColorIndex = (currentColorIndex + 1) % rainbowColors.length;
+}
+
 
     const gallery = document.getElementById("art-gallery");
     const filterInput = document.getElementById("filter");

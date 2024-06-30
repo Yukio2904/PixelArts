@@ -93,6 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more arts here
     ];
 
+document.addEventListener("DOMContentLoaded", function() {
+    const donateButton = document.querySelector('.donate-button');
+
+    donateButton.addEventListener('mouseover', function() {
+        donateButton.style.boxShadow = '0 0 10px #ff4500';
+    });
+
+    donateButton.addEventListener('mouseout', function() {
+        donateButton.style.boxShadow = 'none';
+    });
+});
+
     const gallery = document.getElementById("art-gallery");
     const filterInput = document.getElementById("filter");
 
